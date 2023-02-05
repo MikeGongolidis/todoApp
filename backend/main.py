@@ -1,0 +1,64 @@
+from fastapi import FastAPI
+
+DUMMY_TASK = {
+    "1":
+    {    "id": 1,
+        "title": "skoupisma",
+        "category-id": 1,
+        "asignee-id": 1,
+        "users-id": [1],
+        "group-id": 1},
+    "2":
+    {    "id": 2,
+        "title": "skoupisma",
+        "category-id": 1,
+        "asignee-id": 1,
+        "users-id": [1, 2],
+        "group-id": 1},
+    "3":
+    {    "id": 3,
+        "title": "skoupisma",
+        "category-id": 1,
+        "users-id": [2],
+        "asignee-id": 1,
+        "group-id": 2},
+}
+
+DUMMY_CAT = {
+    "id": 1,
+    "title": "douleies spitiou",
+    "color": "blue"
+}
+
+DUMMY_USER = {
+    "id": 1,
+    "name": "Mike",
+    "group-id": 1
+}
+
+DUMMY_GROUP = {
+    "id": 1,
+    "name": "mike and electra",
+    "users-id": [1, 2]
+}
+
+def find_tasks(val, dicts):
+    tmp = {}
+    for k, v in dicts.items():
+        if val in v['users-id']:
+            tmp[k] = v
+
+    if len(tmp) > 0:
+        return tmp
+    return "Tasks not found"
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
+@app.get("/items/{user_id}")
+def list(user_id: int):
+    
+    return find_tasks(user_id, DUMMY_TASK)
