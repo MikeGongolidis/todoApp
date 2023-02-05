@@ -11,14 +11,14 @@ DUMMY_TASK = {
         "group-id": 1},
     "2":
     {    "id": 2,
-        "title": "skoupisma",
+        "title": "plidirio",
         "category-id": 1,
         "asignee-id": 1,
         "users-id": [1, 2],
         "group-id": 1},
     "3":
     {    "id": 3,
-        "title": "skoupisma",
+        "title": "sideroma",
         "category-id": 1,
         "users-id": [2],
         "asignee-id": 1,
