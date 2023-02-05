@@ -44,10 +44,10 @@ DUMMY_GROUP = {
 }
 
 def find_tasks(val, dicts):
-    tmp = {}
-    for k, v in dicts.items():
+    tmp = []
+    for v in dicts.values():
         if val in v['users-id']:
-            tmp[k] = v
+            tmp.append(v)
 
     if len(tmp) > 0:
         return tmp
