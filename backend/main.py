@@ -12,6 +12,7 @@ DUMMY_TASK = {
         "group_id": 1},
     2:
     {    "id": 2,
+<<<<<<< HEAD
         "title": "skoupisma",
         "category_id": 1,
         "asignee_id": 1,
@@ -24,6 +25,20 @@ DUMMY_TASK = {
         "users_id": [2],
         "asignee_id": 1,
         "group_id": 2},
+=======
+        "title": "plidirio",
+        "category-id": 1,
+        "asignee-id": 1,
+        "users-id": [1, 2],
+        "group-id": 1},
+    "3":
+    {    "id": 3,
+        "title": "sideroma",
+        "category-id": 1,
+        "users-id": [2],
+        "asignee-id": 1,
+        "group-id": 2},
+>>>>>>> 904d65bfabc14fc185d7fc390e57780f8cc4ba73
 }
 
 DUMMY_CAT = {
