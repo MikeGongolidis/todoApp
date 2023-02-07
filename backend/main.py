@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from typing import Optional
 
 DUMMY_TASK = {
     1:
@@ -45,12 +46,12 @@ DUMMY_GROUP = {
 }
 
 class Task(BaseModel):
-    id: int
+    id: Optional[int] = None
     title: str
-    category_id: int
-    asignee_id: int
-    users_id: list
-    group_id: int
+    category_id: Optional[int] = None
+    asignee_id: Optional[int] = None
+    users_id: Optional[list] = None
+    group_id: Optional[int] = None
 
 def find_tasks(user_id, tasks):
     tmp = []
