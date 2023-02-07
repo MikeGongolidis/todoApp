@@ -20,6 +20,7 @@ function App() {
       throw response;
     })
     .then(dd => {
+      console.log("this is called")
       setData(dd)
     })
     .catch( error => {
@@ -32,7 +33,7 @@ function App() {
 
   if(loading) return "Loading...."
   if(error) return <ErrorBox error={error}/>
-
+  console.log(data);
   return (
       <>
       <div className="flex items-center justify-center ">

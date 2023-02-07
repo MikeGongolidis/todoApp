@@ -29,10 +29,8 @@ export function AddTaskForm({ user, data, setData}){
         fetch(backend.replace('user_id', user), requestOptions)
             .then(response => response.json())
             .then(dd =>  {
-                console.log(dd)
-                setData([
-                    dd
-                ]);
+                console.log([dd])
+                setData([dd]);
             }
             );
 
